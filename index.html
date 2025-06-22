@@ -520,7 +520,43 @@
         <figure class="mb-0"><img src="./assets/images/footer_logo.png" alt="" class="img-fluid"></figure>
     </div>
 </section>
+
+<!-- Cookie Consent Overlay -->
+<div id="cookieOverlay" style="
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0d1c25;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', sans-serif;
+">
+  <h2 style="margin-bottom: 0.5rem;">This website uses cookies.</h2>
+  <p style="margin-bottom: 1.5rem;">
+    We use cookies to analyze website traffic and optimize your website experience.
+    By accepting our use of cookies, your data will be aggregated with all other user data.
+  </p>
+  <button id="cookieAcceptBtn" style="
+    background-color: white;
+    color: #0d1c25;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+  ">
+    Accept
+  </button>
+</div> 
+  
 <!-- Latest compiled JavaScript -->
+<script src="assets/js/cookie.js"></script>
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -530,18 +566,5 @@
 <script src="assets/js/carousel.js"></script>
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/animation.js"></script>
-
-<div id="cookieOverlay" class="cookie-overlay">
-  <div class="cookie-modal">
-    <h2>This website uses cookies.</h2>
-    <p>
-      We use cookies to analyze website traffic and optimize your website experience.
-      By accepting our use of cookies, your data will be aggregated with all other user data.
-    </p>
-    <button id="cookieAcceptBtn">Accept</button>
-  </div>
-</div>
-
-
 </body>
 </html>
