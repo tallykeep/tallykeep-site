@@ -1,44 +1,61 @@
+/* Wrapper container */
 .cookie-overlay {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   z-index: 9999;
   display: none;
   justify-content: flex-end;
   align-items: flex-end;
+  padding: 10px;
 }
 
+/* Card styling */
 .cookie-card {
-  max-width: 360px;
-  background: #0b2c3e; /* dark background */
+  background: #0b2c3e;
   color: #ffffff;
-  border-radius: 16px;
-  padding: 25px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20px 24px;
+  max-width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   font-family: 'Karla', sans-serif;
-  border-left: 8px solid var(--e-global-color-accent);
-  text-align: left;
-}
-
-.cookie-text {
-  font-size: 16px;
-  margin-bottom: 18px;
+  font-size: 15px;
   line-height: 1.5;
-  color: #ffffff; /* keep text white */
 }
 
+/* Text inside card */
+.cookie-text {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Accept button */
 .cookie-btn {
-  background-color: var(--e-global-color-accent);
-  color: #fff;
+  background-color: var(--e-global-color-accent, #ffc107);
+  color: #0b2c3e;
   border: none;
-  padding: 10px 24px;
+  padding: 10px 20px;
   border-radius: 50px;
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .cookie-btn:hover {
-  background-color: var(--e-global-color-secondary);
+  background-color: var(--e-global-color-secondary, #ffa000);
+}
+
+/* Make sure it's visible on small devices */
+@media (max-width: 576px) {
+  .cookie-overlay {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    justify-content: center;
+  }
+
+  .cookie-card {
+    max-width: 100%;
+    font-size: 14px;
+  }
 }
