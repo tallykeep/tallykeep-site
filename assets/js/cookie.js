@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const banner = document.getElementById("cookieNotice");
-  const btn = document.getElementById("cookieAcceptBtn");
+  const button = document.getElementById("cookieAcceptBtn");
 
   if (!localStorage.getItem("cookieConsentGiven")) {
-    banner.style.display = "block";
+    banner.classList.remove("d-none");
   }
 
-  btn.addEventListener("click", function () {
+  button.addEventListener("click", function () {
     localStorage.setItem("cookieConsentGiven", "true");
-    banner.style.display = "none";
+    banner.classList.add("d-none");
   });
 });
