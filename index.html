@@ -523,23 +523,16 @@
 </section>
 
 <!-- Cookie Consent Overlay -->
-<div class="row">
-      <div class="col-md-4 col-sm-12 button-fixed">
-        <div class="p-3 pb-4 bg-custom text-white">
-          <div class="row">
-            <div class="col-10">
-              <h2>This website uses cookies.</h2>
-            </div>
-            <div class="col-2 text-center">
-              <i class="fas fa-times"></i>
-            </div>
-          </div>
-          <p>We use cookies to analyze website traffic and optimize your experience. By accepting, your data will be aggregated with all other user data.
-          </p>
-          <button type="button" class="btn btn-danger w-100">Accept</button>
-        </div>
-      </div>
-    </div>
+<div id="cookieNotice" class="cookie-banner-container d-none">
+  <div class="cookie-banner shadow-lg p-4 rounded-lg">
+    <h4 class="cookie-title mb-2">This website uses cookies.</h4>
+    <p class="cookie-text mb-3">
+      We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.
+    </p>
+    <button id="cookieAcceptBtn" class="btn btn-light btn-sm px-4 rounded-pill fw-bold">Accept</button>
+  </div>
+</div>
+
 
   
 <!-- Latest compiled JavaScript -->
