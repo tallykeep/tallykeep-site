@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const acceptBtn = document.getElementById("cookieAcceptBtn");
 
   if (!localStorage.getItem("cookieConsentGiven")) {
-    overlay.style.display = "flex"; // Show on load if no consent
+    overlay.style.display = "flex";
   }
 
   acceptBtn.addEventListener("click", function () {
