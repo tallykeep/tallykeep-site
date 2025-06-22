@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const overlay = document.getElementById("cookieOverlay");
-  const acceptBtn = document.getElementById("cookieAcceptBtn");
+  const banner = document.getElementById("cookieNotice");
+  const btn = document.getElementById("cookieAcceptBtn");
 
   if (!localStorage.getItem("cookieConsentGiven")) {
-    overlay.style.display = "block";
+    banner.style.display = "block";
   }
 
-  acceptBtn.addEventListener("click", function () {
+  btn.addEventListener("click", function () {
     localStorage.setItem("cookieConsentGiven", "true");
-    overlay.style.display = "none";
+    banner.style.display = "none";
   });
 });
