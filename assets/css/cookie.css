@@ -1,20 +1,20 @@
-.cookie-alert {
-  z-index: 1080;
-  max-width: 520px;
-}
-
-.cookie-container {
-  background-color: #ffffff;
-}
-
-.cookie-content span {
-  font-size: 0.9rem;
-  display: block;
-  margin-top: 0.25rem;
-}
-
-@media (max-width: 576px) {
-  .cookie-content {
-    font-size: 0.9rem;
-  }
-}
+      {
+      background-color: #1B1464;
+      font-family: "Nunito Sans";
+      }
+      .bg-custom{
+      background-color:#130f40;
+      }
+      .button-fixed{
+      bottom: 0;
+      position: fixed;
+      right: 0;
+      border-radius: 4px;
+      }
+      .fas{
+      cursor: pointer;
+      font-size: 24px;
+      }
+      p{
+      font-size: 14px;
+      }
