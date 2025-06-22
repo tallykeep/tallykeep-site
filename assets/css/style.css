@@ -2227,49 +2227,46 @@ textarea {
 }
 
 
-.cookie-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+#cookieOverlay {
   display: none;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #0e2a36;
+  color: white;
+  padding: 1.5rem 2rem;
+  max-width: 360px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+  font-family: 'Lato', sans-serif;
 }
 
-.cookie-modal {
-  background: #0d1f2d;
-  color: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  max-width: 500px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+#cookieOverlay h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-.cookie-modal h2 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
+#cookieOverlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+#cookieAcceptBtn {
+  background-color: white;
+  color: #0e2a36;
+  padding: 0.6rem 1.5rem;
   font-weight: 600;
-}
-
-.cookie-modal p {
-  font-size: 1em;
-  margin-bottom: 25px;
-  color: #cfd8dc;
-}
-
-.cookie-modal button {
-  background: #ffffff;
-  color: #222;
+  font-size: 1rem;
   border: none;
-  padding: 12px 30px;
   border-radius: 999px;
-  font-size: 1em;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.cookie-modal button:hover {
-  background: #e0e0e0;
+#cookieAcceptBtn:hover {
+  background-color: #f3f3f3;
 }
