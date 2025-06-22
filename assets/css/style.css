@@ -2225,3 +2225,51 @@ textarea {
     top: 135px;
     right: 0;
 }
+
+
+.cookie-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cookie-modal {
+  background: #0d1f2d;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-modal h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.cookie-modal p {
+  font-size: 1em;
+  margin-bottom: 25px;
+  color: #cfd8dc;
+}
+
+.cookie-modal button {
+  background: #ffffff;
+  color: #222;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cookie-modal button:hover {
+  background: #e0e0e0;
+}
