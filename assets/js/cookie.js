@@ -1,13 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const banner = document.getElementById("cookieNotice");
-  const button = document.getElementById("cookieAcceptBtn");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cookiePopup = document.getElementById("cookiePopup");
+    const acceptBtn = document.getElementById("acceptCookie");
 
-  if (!localStorage.getItem("cookieConsentGiven")) {
-    banner.classList.remove("d-none");
-  }
+    if (!localStorage.getItem("cookieConsent")) {
+      cookiePopup.style.display = "block";
+    }
 
-  button.addEventListener("click", function () {
-    localStorage.setItem("cookieConsentGiven", "true");
-    banner.classList.add("d-none");
+    acceptBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "true");
+      cookiePopup.style.display = "none";
+    });
   });
-});
+</script>
