@@ -523,10 +523,16 @@
 </section>
 
 <!-- Cookie Consent Overlay -->
-<div id="cookieOverlay">
-  <h3>This website uses cookies</h3>
-  <p>We use cookies to analyze traffic and enhance your experience. By accepting, your data will be aggregated with all other user data.</p>
-  <button id="cookieAcceptBtn">Accept</button>
+<div id="cookieNotice" class="cookie-alert show fixed-bottom mb-3 mx-3">
+  <div class="card cookie-container shadow-lg border-0 rounded-lg p-3">
+    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+      <div class="cookie-content text-dark mb-2 mb-md-0">
+        <strong>This website uses cookies.</strong>
+        <span>We use cookies to analyze website traffic and optimize your experience. By accepting, your data will be aggregated with all other user data.</span>
+      </div>
+      <button id="cookieAcceptBtn" class="btn btn-dark rounded-pill px-4 py-2 mt-2 mt-md-0">Accept</button>
+    </div>
+  </div>
 </div>
   
 <!-- Latest compiled JavaScript -->
