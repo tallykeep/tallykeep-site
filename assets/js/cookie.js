@@ -1,15 +1,15 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const cookiePopup = document.getElementById("cookiePopup");
-    const acceptBtn = document.getElementById("acceptCookie");
+    const notice = document.getElementById("cookieNotice");
+    const accept = document.getElementById("acceptCookies");
 
     if (!localStorage.getItem("cookieConsent")) {
-      cookiePopup.style.display = "block";
+      notice.style.display = "block";
     }
 
-    acceptBtn.addEventListener("click", function () {
+    accept.addEventListener("click", function () {
       localStorage.setItem("cookieConsent", "true");
-      cookiePopup.style.display = "none";
+      notice.style.display = "none";
     });
   });
 </script>
