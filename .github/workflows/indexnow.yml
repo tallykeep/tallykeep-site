@@ -1,0 +1,22 @@
+name: Submit Sitemap via IndexNow
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Submit sitemap URLs
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: https://tallykeep.co/sitemap.xml
+          key: ${{ secrets.INDEXNOW_KEY }}
+          key-location: ${{ secrets.INDEXNOW_KEY_LOCATION }}
+          endpoint: api.indexnow.org
+          since: 1
+          since-unit: day
