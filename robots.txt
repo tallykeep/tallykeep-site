@@ -1,13 +1,16 @@
-# Allow all bots full access
 User-agent: *
 Allow: /
-
-# Explicitly allow Applebot and Bingbot (optional but clear)
-User-agent: Applebot
-Allow: /
+# Optional crawl-delay to reduce bot server load
+# Crawl-delay: 10
 
 User-agent: Bingbot
 Allow: /
 
-# Declare sitemap location
+User-agent: Applebot
+Allow: /
+
+# Block extended Applebot scraping-only for AI model usage
+User-agent: Applebot-Extended
+Disallow: /
+
 Sitemap: https://tallykeep.co/sitemap.xml
