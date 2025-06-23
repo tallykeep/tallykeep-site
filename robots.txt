@@ -1,3 +1,13 @@
+# Allow all bots full access
 User-agent: *
 Allow: /
+
+# Explicitly allow Applebot and Bingbot (optional but clear)
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Declare sitemap location
 Sitemap: https://tallykeep.co/sitemap.xml
