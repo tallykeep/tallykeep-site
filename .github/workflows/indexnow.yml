@@ -1,9 +1,11 @@
 name: Submit Sitemap via IndexNow
+
 on:
+  workflow_dispatch: {}       # Allows manual triggering via the UI
   push:
     branches: [main]
   schedule:
-    - cron: '0 */6 * * *'  # Run every 6 hours
+    - cron: '0 */6 * * *'     # Run every 6 hours
 
 jobs:
   indexnow:
