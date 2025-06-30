@@ -1,0 +1,33 @@
+name: Deploy Static Site with Cache-Busting
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  cachebust-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate cache version
+        id: vars
+        run: |
+          echo "version_tag=$(date +%Y%m%d)-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Add cache-busting query to image URLs
+        run: |
+          VERSION=${{ steps.vars.outputs.version_tag }}
+
+          # This will update image references across all .html and .css files
+          find . \( -name "*.html" -o -name "*.css" \) -exec sed -i -E "s|(assets/images/[^\"')]+)(\?v=[^\"')]+)?|\1?v=$VERSION|g" {} \;
+
+      - name: Confirm changes
+        run: |
+          echo "Updated image references with version ${{ steps.vars.outputs.version_tag }}"
+
+      - name: Deploy to Porkbun (placeholder)
+        run: |
+          echo "Insert your real deploy method here: rsync, curl, ftp, etc."
